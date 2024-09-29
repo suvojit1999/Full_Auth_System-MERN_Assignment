@@ -26,7 +26,7 @@ app.get('/', (req, res)=>{
 
 //I usually face problems deploying backend servers to vercel, so I am deploying this backend to render (I will still deploy the frontend to vercel as asked). But render's free service has a policy of shutting down the server if it is inactive for 50sec, and if sent request to the backend after that 50secs , it takes a lot of time to restart the server again. so I am adding a piece of code here that will keep sending request to it's own server in every 30 secs, so that the render server never shuts down...
 
-const siteUrl = "https://myblogs-mern-eg1e.onrender.com";
+const siteUrl = "https://full-auth-system-mern-assignment-backend.onrender.com";
 const interval = 30000; 
 
 function reloadWebsite() {
