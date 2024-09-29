@@ -91,8 +91,12 @@ router.post('/api/signin', authenticateJwt, async (req, res) => {
 
         const token = jwt.sign({ user_name: accountConfirmation.user_name, email: accountConfirmation.email }, process.env.SECRET_KEY, { expiresIn: '1hr' })
 
+        const user = {
+            user_name: accountConfirmation.user_name,
+            email: accountConfirmation.email
+        }
         res.cookie('jwt_token', token, { httpOnly: true, secure: false })
-        return res.status(200).json({ message: "login successful" })
+        return res.status(200).json({ message: "login successful" , user})
 
     } catch (err) {
         return res.status(400).json({ message: 'something went wrong', err })
