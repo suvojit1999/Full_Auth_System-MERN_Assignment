@@ -12,7 +12,7 @@ On localhost:
 9. Open the url 'http://localhost:5173' on your browser, and use the application.
 
 For the deployed link:
-1. I already deployed the frontend part on vercel, as I was to do. you can visit the app on "https://full-auth-system-mern-assignment-cf5rwiz19.vercel.app/"
+1. I already deployed the frontend part on vercel, as I was to do. you can visit the app on "https://full-auth-system-mern-assignment.vercel.app/"
 2. I deployed the backend part to Render.com.
 3. And I used MongoDB Atlas as our database to store all our user data. And used bcrypt to hash the password of the users for security.
 4. And I also used jwt tokens which are stored in the browser as cookies to manage user authentication and maintain user sessions, even after closing the browser tab.
