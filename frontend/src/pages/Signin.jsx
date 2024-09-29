@@ -17,7 +17,15 @@ const Signin = () => {
         email: email,
         password: password,
       }
-      const response = await fetch('http://localhost:3000/api/signin', {
+      // const response = await fetch('http://localhost:3000/api/signin', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(data),
+      //   credentials: 'include'
+      // })
+      const response = await fetch('https://full-auth-system-mern-assignment-backend.onrender.com/api/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

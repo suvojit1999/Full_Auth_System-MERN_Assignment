@@ -22,7 +22,11 @@ function App() {
     // }
 
     const CheckUser = async () => {
-      const response = await fetch('http://localhost:3000/api/auth', {
+      // const response = await fetch('http://localhost:3000/api/auth', {
+      //   method: 'GET',
+      //   credentials: 'include',
+      // });
+      const response = await fetch('https://full-auth-system-mern-assignment-backend.onrender.com/api/auth', {
         method: 'GET',
         credentials: 'include',
       });
@@ -47,7 +51,11 @@ function App() {
 
     const handelLogout = async () => {
       try {
-        const response = await fetch('http://localhost:3000/logout', {
+        // const response = await fetch('http://localhost:3000/logout', {
+        //   method: 'POST',
+        //   credentials: 'include'
+        // });
+        const response = await fetch('https://full-auth-system-mern-assignment-backend.onrender.com/logout', {
           method: 'POST',
           credentials: 'include'
         });
