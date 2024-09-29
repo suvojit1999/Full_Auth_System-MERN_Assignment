@@ -35,7 +35,7 @@ router.get('/api/auth', async (req, res) => {
     jwt.verify(token, process.env.SECRET_KEY, (err, user) => {
         if (err) {
             // console.log(err);
-            res.clearCookie('jwt_token', { httpOnly: true, secure: true });
+            res.clearCookie('jwt_token', { httpOnly: true, secure: true, sameSite: 'None' });
             return res.status(400).json({ error: "Token is not valid or expired" });
         }
 
@@ -95,7 +95,7 @@ router.post('/api/signin', authenticateJwt, async (req, res) => {
             user_name: accountConfirmation.user_name,
             email: accountConfirmation.email
         }
-        res.cookie('jwt_token', token, { httpOnly: true, secure: false })
+        res.cookie('jwt_token', token, { httpOnly: true, secure: true, sameSite: 'None', maxAge: 24*60*60*1000 })
         return res.status(200).json({ message: "login successful" , user})
 
     } catch (err) {
@@ -106,7 +106,7 @@ router.post('/api/signin', authenticateJwt, async (req, res) => {
 })
 
 router.post('/logout', (req, res) => {
-    res.clearCookie('jwt_token', { httpOnly: true, secure: true });
+    res.clearCookie('jwt_token', { httpOnly: true, secure: true, sameSite: 'None' });
     return res.json({ message: 'Logged out successfully' });
 })
 

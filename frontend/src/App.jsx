@@ -47,7 +47,7 @@ function App() {
       };
     }
       CheckUser();
-    }, [update])
+    }, [])
 
     const handelLogout = async () => {
       try {
