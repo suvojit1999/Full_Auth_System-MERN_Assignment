@@ -14,6 +14,9 @@ app.use(cors({
 app.use(express.json())
 app.use('/', auth)
 
+app.get('/', (req, res)=>{
+    res.send("Hallo World")
+})
 
 app.listen(port, () => {
     console.log(`App is listening on port ${port}`)
