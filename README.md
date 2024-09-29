@@ -14,4 +14,6 @@ On localhost:
 For the deployed link:
 1. I already deployed the frontend part on vercel, as I was to do. you can visit the app on "https://full-auth-system-mern-assignment-cf5rwiz19.vercel.app/"
 2. I deployed the backend part to Render.com.
-3. I wrote the backend part such a way that it is able to handle various input scenarios (correct, incorrect, and missing inputs) and will return appropriate responses for each case. Feel free to test the application to see the results.
+3. And I used MongoDB Atlas as our database to store all our user data. And used bcrypt to hash the password of the users for security.
+4. And I also used jwt tokens which are stored in the browser as cookies to manage user authentication and maintain user sessions, even after closing the browser tab.
+5. I wrote the backend part such a way that it is able to handle various input scenarios (correct, incorrect, and missing inputs) and will return appropriate responses for each case. Feel free to test the application to see the results.
