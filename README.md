@@ -14,3 +14,4 @@ On localhost:
 For the deployed link:
 1. I already deployed the frontend part on vercel, as I was to do. you can visit the app on "https://full-auth-system-mern-assignment-cf5rwiz19.vercel.app/"
 2. I deployed the backend part to Render.com.
+3. I wrote the backend part such a way that it is able to handle various input scenarios (correct, incorrect, and missing inputs) and will return appropriate responses for each case. Feel free to test the application to see the results.
